@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Collecte de données</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>📊 Bienvenue</h1>
+
+<p>
+Cette application collecte vos informations anonymes afin
+de réaliser une étude statistique intelligente sur :
+</p>
+
+<ul>
+<li>Âge</li>
+<li>Salaire actuel</li>
+<li>Type d'école</li>
+<li>Possession Android</li>
+</ul>
+
+<p>
+Les résultats permettront de classifier les profils automatiquement.
+</p>
+
+<button onclick="changerMode()" class="mode-btn" id="btn">
+🌙 Mode Nuit
+</button>
+
+<hr>
+
+<form action="/save" method="POST">
+
+<label>Âge :</label>
+<input type="number" name="age" required>
+
+<label>Salaire :</label>
+<input type="number" name="salaire" required>
+
+<label>École :</label>
+<select name="ecole">
+<option value="publique">Publique</option>
+<option value="privee">Privée</option>
+</select>
+
+<label>Téléphone Android :</label>
+<select name="android">
+<option value="oui">Oui</option>
+<option value="non">Non</option>
+</select>
+
+<button type="submit" class="send-btn">
+📤 Envoyer
+</button>
+
+</form>
+
+</div>
+
+<script>
+function changerMode(){
+
+document.body.classList.toggle("dark");
+
+let btn = document.getElementById("btn");
+
+if(document.body.classList.contains("dark")){
+btn.innerHTML="☀️ Mode Jour";
+}else{
+btn.innerHTML="🌙 Mode Nuit";
+}
+
+}
+</script>
+
+</body>
+</html>

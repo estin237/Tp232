@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Résultats</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<button onclick="changerMode()" class="mode-btn" id="btn">
+🌙 Mode Nuit
+</button>
+<div class="box">
+
+<h1>📈 Résultats de l'étude</h1>
+
+<h2>Statistiques descriptives</h2>
+{{ stats|safe }}
+
+<h2>Classification automatique</h2>
+{{ table|safe }}
+
+<a href="/">⬅ Retour</a>
+
+</div>
+
+
+
+
+
+<h2 style="text-align: center;">Classement Actualisé</h2>
+
+ <meta charset="UTF-8">
+    <title>Classement des Salaires</title>
+    <style>
+        table { width: 80%; border-collapse: collapse; margin: 20px auto; font-family: sans-serif; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #2c3e50; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        .barre-fond { background: #eee; width: 100px; height: 10px; display: inline-block; border-radius: 5px; }
+        .barre-remplissage { background: #27ae60; height: 10px; border-radius: 5px; }
+    </style>
+<script>
+function changerMode(){
+
+document.body.classList.toggle("dark");
+
+   
+let btn = document.getElementById("btn");
+
+if(document.body.classList.contains("dark")){
+btn.innerHTML="☀️ Mode Jour";
+}else{
+btn.innerHTML="🌙 Mode Nuit";
+}
+
+}
+
+
+</script>
+
+<h3>Répartition des personnes</h3>
+<img src="/static/pie.png" width="400">
+
+
+</body>
+</html>

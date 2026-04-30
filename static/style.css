@@ -1,0 +1,63 @@
+body{
+font-family:Arial;
+background:#f2f2f2;
+padding:30px;
+transition:0.4s;
+}
+
+.dark{
+background:#111;
+color:white;
+}
+
+.box{
+background:white;
+padding:30px;
+border-radius:12px;
+max-width:700px;
+margin:auto;
+box-shadow:0 0 10px gray;
+}
+
+.dark .box{
+background:#222;
+}
+
+input,select{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+
+button{
+padding:12px 20px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+.mode-btn{
+background:#333;
+color:white;
+}
+
+.send-btn{
+background:#007bff;
+color:white;
+width:100%;
+}
+
+.send-btn:hover{
+background:#0056b3;
+}
+
+table{
+border-collapse:collapse;
+width:100%;
+margin-top:20px;
+}
+
+th,td{
+border:1px solid gray;
+padding:8px;
+}
