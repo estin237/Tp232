@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 # Connexion base
 def db():
-    return sqlite3.connect("databases.db")
+    return sqlite3.connect("database.db")
 
 # Page formulaire
 @app.route('/')
